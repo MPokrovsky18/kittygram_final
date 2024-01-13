@@ -14,6 +14,9 @@ services:
   backend:
     image: maxpokrovsky/kittygram_backend
     env_file: .env
+    depends_on:
+      - db
+    restart: on-failure
     volumes:
       - static_volume:/backend_static
       - media_volume:/media
@@ -26,7 +29,11 @@ services:
   gateway:
     image: maxpokrovsky/kittygram_gateway
     env_file: .env
+    depends_on:
+      - backend
+      - frontend
     volumes:
       - static_volume:/static/
+      - media_volume:/media
     ports:
       - 9000:80
