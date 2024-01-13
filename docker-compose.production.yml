@@ -19,7 +19,7 @@ services:
     restart: on-failure
     volumes:
       - static_volume:/backend_static
-      - media_volume:/media
+      - media_volume:/app/media
   frontend:
     image: maxpokrovsky/kittygram_frontend
     env_file: .env
