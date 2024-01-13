@@ -1,5 +1,52 @@
 #  Как работать с репозиторием финального задания
 
+[![Build Status](https://github.com/MPokrovsky18/kittygram_final/actions/workflows/main.yml/badge.svg)](https://github.com/{YOUR_USERNAME}/{YOUR_REPOSITORY}/actions/workflows/main.yml)
+
+## Автор
+
+- **Максим Покровский**
+  - GitHub: [@MPokrovsky18](https://github.com/MPokrovsky18)
+
+## Ссылка на репозиторий
+
+[https://github.com/MPokrovsky18/kittygram_final](https://github.com/MPokrovsky18/kittygram_final)
+
+## Описание
+
+Проект **Kittygram Final** - это блог для любителей кошек, предоставляющий уютное место для хозяев кошек, где они могут делиться фотографиями своих пушистых друзей.
+
+## Стек
+
+- **Фронтенд:** React
+- **Бэкенд:** Django, Django REST Framework
+- **База данных:** PostgreSQL
+- **Другие технологии:** Docker, Gunicorn, pytest
+
+## Развертывание
+
+1. Установите Docker и Docker Compose на вашем сервере.
+2. Склонируйте репозиторий: `git clone https://github.com/MPokrovsky18/kittygram_final.git`.
+3. Перейдите в директорию проекта: `cd kittygram_final`.
+4. Создайте файл `.env` на основе примера `.env.example` и заполните необходимые переменные окружения.
+5. Запустите приложение с помощью Docker Compose: `docker-compose -f docker-compose.production.yml up -d`.
+
+## Примеры запросов к API
+
+1. **Получение списка всех кошек:**
+   ```http
+   GET /api/cats/
+   ```
+
+2. **Получение конкретной кошки по идентификатору:**
+   ```http
+   GET /api/cats/{id}/
+   ```
+
+3. **Регистрация нового пользователя:**
+   ```http
+   POST /api/auth/users/
+   ```
+
 ## Что нужно сделать
 
 Настроить запуск проекта Kittygram в контейнерах и CI/CD с помощью GitHub Actions
